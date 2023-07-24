@@ -2,3 +2,5 @@
 /csv
 /script_env
 /test.py
+/.env
+/cmd.txt

@@ -1,9 +1,12 @@
 import sys
 import csv
 import mysql.connector
+from dotenv import dotenv_values
+
+config = dotenv_values('.env')
 
 db = mysql.connector.connect(
-    host="localhost", user="root", passwd="root", database="test_db"
+    host=config.get('HOST'), user=config.get('USER'), passwd=config.get('PASSWD'), database=config.get('DATABASE')
 )
 
 
